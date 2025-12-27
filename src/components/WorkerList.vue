@@ -40,6 +40,9 @@ const props = defineProps({
 </template>
 
 <style scoped>
+.list {
+    margin-top: 10px;
+}
 .item {
     margin-bottom: 10px;
     display: flex;

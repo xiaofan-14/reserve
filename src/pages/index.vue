@@ -124,13 +124,20 @@ watch(value2, (newVal) => {
                 </div>
             </div>
         </div>
-
-        <div class="worker-list">
-            <!-- 技师列表展示区域 -->
-            <p class="worker-title">
-                推荐维修师
-            </p>
-            <WorkerList :list="filterList" />
+        <div class="content">
+            <div class="worker-list">
+                <!-- 技师列表展示区域 -->
+                <p class="worker-title">
+                    推荐维修师
+                </p>
+                <WorkerList :list="filterList" />
+            </div>
+            <div class="map">
+                <p class="worker-title">
+                    周边服务分布
+                </p>
+                <div style="width: 400px; height: 400px; background: #ccc;"></div>
+            </div>
         </div>
     </el-main>
 
@@ -148,6 +155,7 @@ watch(value2, (newVal) => {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #e8e8e8;
+    z-index: 999;
 }
 
 .main-content {
@@ -212,7 +220,20 @@ watch(value2, (newVal) => {
     box-shadow: none;
 }
 
+.content {
+    display: flex;
+    gap: 1rem;
+}
+
+.map {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ }
+
 .worker-list {
+    flex: 1;
     margin-top: 16px;
 }
 
